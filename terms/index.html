@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 - V7</title>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.0.10/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
+    <link rel="manifest" href="../manifest.webmanifest">
+    <script>
+        self.addEventListener('install', function (e) {
+        console.log('ServiceWorker install')
+        });
+        
+        self.addEventListener('activate', function (e) {
+        console.log('ServiceWorker activate')
+        });
+        
+        self.addEventListener('fetch', function (event) {
+        console.log('ServiceWorker loaded')
+        });
+        window.addEventListener('load', function () {
+                    if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register("../sw.js")
+                            .then(function (registration) {
+                                console.log("serviceWorker registed.");
+                            }).catch(function (error) {
+                            console.warn("serviceWorker error.", error);
+                        });
+                    }
+        });
+    </script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCY1NQXSJ0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-HCY1NQXSJ0');
+    </script>
+</head>
+<header class="fixed glass">
+    <nav>
+        <button class="circle transparent" onclick="history.back()">
+            <i>arrow_backward</i>
+        </button>
+        <h5 class="bold max left-align">利用規約</h5>
+        <button class="circle transparent" onclick="window.location.reload(true);">
+            <i>refresh</i>
+        </button>
+    </nav>
+</header>
+<main class="responsive">
+<body class="serif">
+    <h5 class="bold">for Education全般</h5>
+    <p>for Education(以後，当機能)は，<B>教育(校内用)を目的として作られています。</B>そのため，SNSまたはその他の手段で校外に 情報を配信また転送などを禁止しています。</p>
+    <p>次の場合では，責任を負いかねます。</p>
+    <p>- タブレットの故障・没収・修理。<br>- 先生・教師の叱責。<br>- 当ページや移動先のページからのコンピューターウイルスなどの感染や情報の流出。<br>- その他の不利益などの賠償など。</p>
+    <h5 class="bold">掲示板</h5>
+    <p>"掲示板"では，主に情報共有や投稿が利用できます。</p>
+    <p>過去の掲示板から 削除されます。(今後 以前の削除された内容を閲覧できる機能を導入予定)</p>
+    <p>次の内容は，削除される可能性があります。</p>
+    <p>- 人を中傷する内容。<br>- 個人情報を含む内容。<br>- すべてのAA(アスキーアート)または，それに準じるもの。<br>- また，その他の内容</p>
+    <p>また，掲示板では <B>クラスや学校・学年,教育機関などの情勢から一時的または永続的に利用できなくする権利を保有しています</B>。</p>
+    <h5 class="bold">朝テストスケジュール</h5>
+    <p>"朝テストスケジュール"では，主にClassiまたはロイロノートなどから 朝テストやスケジュールを当機能で 閲覧できる機能です。</p>
+    <p>このファイルは 暗号化せずにGitHubで表示しているため 予告なく削除することがあります。</p>
+    <p>その際は トップページで情報を表示することに努めます。</p>
+    <h5 class="bold">ミーティング</h5>
+    <p>"朝テストスケジュール"では，学校内で バックグラウンド(以後，BG)でミーティングアプリで遊ぶための ミーティング参加コード共有機能です。</p>
+    <p>「学校のタブレットの使い方」(中/高3は 2022年5月21日)での 使用方法に校則違反などに記載されていないため 校則内と考えます。</p>
+    <p>また，タブレットでの生徒または教師の画像のスクリーンショット撮影は 校則違反になることがあります。そのため，撮影者の許可を得てから撮影すべきです。</p>
+    <h5 class="bold">Invidious</h5>
+    <p>"Invidious"では，iフィルターの範囲内でYouTube動画を非公式で閲覧できる機能です。</p>
+    <p>この機能に関しては，ホームルーム中や授業中やその他 校内で使用すべきでないです。</p>
+    <p>それを使用するにあたっては，"校則違反"・"YouTubeの規約違反"になることがあるため 自己責任で利用してください。</p>
+</body>
+</main>
+</html>

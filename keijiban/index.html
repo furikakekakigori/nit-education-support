@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掲示板(投稿) - V6.1</title>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.0.10/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
+    <link rel="manifest" href="../manifest.webmanifest">
+    <script>
+        self.addEventListener('install', function (e) {
+        console.log('ServiceWorker install')
+        });
+        
+        self.addEventListener('activate', function (e) {
+        console.log('ServiceWorker activate')
+        });
+        
+        self.addEventListener('fetch', function (event) {
+        console.log('ServiceWorker loaded')
+        });
+        window.addEventListener('load', function () {
+                    if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register("../sw.js")
+                            .then(function (registration) {
+                                console.log("serviceWorker registed.");
+                            }).catch(function (error) {
+                            console.warn("serviceWorker error.", error);
+                        });
+                    }
+        });
+    </script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCY1NQXSJ0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-HCY1NQXSJ0');
+    </script>
+</head>
+<header class="fixed glass">
+    <nav>
+        <button class="circle transparent" onclick="history.back()">
+            <i>arrow_backward</i>
+        </button>
+        <h5 class="bold max left-align">掲示板(投稿)</h5>
+        <!-- <button class="circle transparent" onclick="location.href='./'">
+            <i>edit</i>
+        </button> -->
+        <button class="circle transparent" onclick="window.location.reload(true);">
+            <i>refresh</i>
+        </button>
+        <button class="circle transparent" onclick="location.href='preview'">
+            <i>preview</i>
+        </button>
+    </nav>
+</header>
+<main class="responsive">
+<body>
+    <nav class="scroll center-align">
+        <!-- <a class="chip border large round" href="./"><i>edit</i>投稿</a> -->
+        <a class="chip border large round" onclick='window.location.reload(true);'><i>refresh</i>読込</a>
+        <a class="chip border large round" href="preview"><i>preview</i>閲覧</a>
+    </nav>
+    <div>
+        <div class="tabs active">
+          <a data-ui="#local" class="active"><b>普通の掲示板</b></a>
+          <a data-ui="#about_nichikoma"><b>学校について語るスレ</b></a>
+        </div>
+        <div class="page padding left active" id="local">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdIeZD7U9ep7UkwxkRNAJyZwHbHqezZZiohJeymd2dLZVZCIw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+                <h4 class="bold" for="1996159697">名前</h4>
+                <div class="field border round">
+                    <input id="1901562601" type="text" name="entry.1901562601" class="form-control" maxlength="25">
+                    <span class="helper">最大: 25文字</span>
+                </div>
+                <h4 class="bold" for="954330460">内容</h4>
+                <div class="field textarea border round">
+                    <textarea id="861124243" name="entry.861124243" required=""></textarea>
+                    <span class="helper">誹謗中傷や他人を傷つける内容は入力しないでください</span>
+                </div>
+            <input type="hidden" name="fvv" value="1">
+            <input type="hidden" name="fbzx" value="-2965430321886173081">
+            <input type="hidden" name="pageHistory" value="0">
+            <center>
+                <button class="flat round extra" type="submit" data-ui="#enter">
+                    <i class="material-symbols-rounded">send</i>
+                    <span>送信</span>
+                </button>
+                <script type="text/javascript">
+                    let submitted = false;
+                </script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='sent';}"></iframe>
+            </center>
+            </form>
+        </div>
+        <div class="page padding right" id="about_nichikoma">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScid_GWpIdh5N9yooe5-8qMlfqlJuQ3zjdSxUrZkwO09hXw4A/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+                <h4 class="bold" for="406467849">名前</h4>
+                <div class="field border round">
+                    <input id="1162016125" type="text" name="entry.1162016125" class="form-control" required="">
+                    <span class="helper">最大: 25文字</span>
+                </div>
+                <h4 class="bold" for="312867100">内容</h4>
+                <div class="field textarea border round">
+                    <textarea id="1442167946" name="entry.1442167946" class="form-control" required=""></textarea>
+                    <span class="helper">誹謗はありですが，中傷(ガーシー)は禁止です。</span>
+                </div>
+                <input type="hidden" name="fvv" value="1">
+                <center>
+                    <button class="flat round extra" type="submit" data-ui="#enter">
+                        <i class="material-symbols-rounded">send</i>
+                        <span>送信</span>
+                    </button>
+                    <script type="text/javascript">
+                        let submitted = false;
+                    </script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='sent-school';}"></iframe>
+                </center>
+            </form>
+        </div>
+    </div>
+    <p class="center-align"><i>send</i>「送信」ボタンを連打すると 複数投稿されることがあります。</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシー - V7</title>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.0.10/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
+    <link rel="manifest" href="../manifest.webmanifest">
+    <script>
+        self.addEventListener('install', function (e) {
+        console.log('ServiceWorker install')
+        });
+        
+        self.addEventListener('activate', function (e) {
+        console.log('ServiceWorker activate')
+        });
+        
+        self.addEventListener('fetch', function (event) {
+        console.log('ServiceWorker loaded')
+        });
+        window.addEventListener('load', function () {
+                    if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register("../sw.js")
+                            .then(function (registration) {
+                                console.log("serviceWorker registed.");
+                            }).catch(function (error) {
+                            console.warn("serviceWorker error.", error);
+                        });
+                    }
+        });
+    </script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCY1NQXSJ0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-HCY1NQXSJ0');
+    </script>
+</head>
+<header class="fixed glass">
+    <nav>
+        <button class="circle transparent" onclick="history.back()">
+            <i>arrow_backward</i>
+        </button>
+        <h5 class="bold max left-align">プライバシー</h5>
+        <button class="circle transparent" onclick="window.location.reload(true);">
+            <i>refresh</i>
+        </button>
+    </nav>
+</header>
+<main class="responsive">
+<body class="serif">
+    <h5 class="bold">Google Analyticsによる統計の調査</h5>
+    <p>これにより 次の情報を送信します。</p>
+    <p>- ページの参照元。(おおよその位置情報)<br>- 利用している端末。(OSや機種名)<br>- ユーザーの言語。<br>- ページの表示回数など</p>
+</body>
+</main>
+</html>

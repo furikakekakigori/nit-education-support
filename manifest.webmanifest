@@ -1,0 +1,17 @@
+{
+    "lang": "ja-JP",
+    "name": "for Education",
+    "short_name": "Education",
+    "description": "教育用に作られた 教育拡張機能です。",
+    "start_url": "./?utm_source=PWA_v7",
+    "background_color": "#0061a6",
+    "theme_color": "#0061a6",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./pwa/icon/stable-icon-512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

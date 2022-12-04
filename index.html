@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja-JP" dir="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for Education - v7 Beta</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/beercss@2.3/dist/cdn/beer.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.0.10/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCY1NQXSJ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HCY1NQXSJ0');
+  </script>
+</head>
+<header class="fixed glass">
+  <nav>
+    <div class="max">
+      <img src="./logo.svg" alt="for Education" style="height: 40px" alt="for Education">
+    </div>
+    <button class="circle transparent" onclick="window.location.reload(true);">
+        <i>refresh</i>
+    </button>
+  </nav>
+</header>
+<!-- <nav class="bottom glass">
+  <a class="active" href="./">
+    <i>home</i>
+    <span>ホーム</span>
+  </a>
+  <a href="./widget">
+    <i>widgets</i>
+    <span>Widget</span>
+  </a>
+</nav> -->
+<main class="responsive">
+<body>
+  <h5 class="bold">Widget・ニュース</h5>
+  
+  <div class="row scroll top-align">
+    <article class="small-width border round">
+      <h6 class="bold">中里氏，ｼﾝﾒﾄﾘｰ協会脱退を取り消し。新たな被害者が急増も?</h6>
+      <p class="small-text center-align">11月29日 午後10:52・ネタ</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">中里氏，謝罪。被害者へ「申し訳ありませんでした」。</h6>
+      <p class="small-text center-align">11月29日 午後1:22・ネタ</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">世論より 中里氏による山﨑氏等に土下座求む声9割超と判明。</h6>
+      <p class="small-text center-align">11月29日 午後0:22・ネタ</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">光山氏，来月10日（土） 休みで「フォーーッ！！」</h6>
+      <p class="small-text center-align">11月29日 午後0:08</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【速報】中里氏，ｼﾝﾒﾄﾘｰ協会を脱退が正式表明。</h6>
+      <p class="small-text center-align">11月29日 午前11:31</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【朗報】中里氏，本日 シンメトリー教会脱退か。</h6>
+      <p class="small-text center-align">11月29日 午前11:31</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">国語科担当，新たな起床方法「なでなで法」を発明。</h6>
+      <p class="small-text center-align">11月29日 午前9:10</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">国語科担当，遅刻者へ「へい (い)らっしゃい」で歓迎。</h6>
+      <p class="small-text center-align">11月29日 午前9:01</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【朗報】光山氏，ハチミツ事件の笑いから 起死回生。</h6>
+      <p class="small-text center-align">11月28日 午後1:49</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">国語科担当，新たな起床方法「キチ叫び」を採用。新ｺﾝﾌﾟﾗで</h6>
+      <p class="small-text center-align">11月29日 午後0:42・ネタ</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">中里氏，図形授業をｼﾝﾒﾄﾘｰと勘違い。正しくは 線対称。</h6>
+      <p class="small-text center-align">11月28日 午前10:09</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【朗報】ラストクラッパー，J3A担任より事実上公認か。</h6>
+      <p class="small-text center-align">11月26日 午前11:53</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">光山氏，「指揮者賞 １位 不可避と見られる」と元J1B担任から。</h6>
+      <p class="small-text center-align">11月26日 午前11:53</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【悲報】中里氏，Popcatデータ およそ170万以上が消滅。</h6>
+      <p class="small-text center-align">11月25日 午後1:17</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【悲報】白チョークが 職員室・J3Aから消滅してしまう。</h6>
+      <p class="small-text center-align">11月24日 午後2:27・提供</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">また，忘れのおよそ 95%以上が プロ睡眠者と判明する。</h6>
+      <p class="small-text center-align">11月24日 午前9:01</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">また，忘れ申告せず 授業開始が 15分遅れ。</h6>
+      <p class="small-text center-align">11月24日 午前9:01</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【悲報】国語，便覧をクラス およそ7割が忘れ。授業に支障。</h6>
+      <p class="small-text center-align">11月24日 午前8:54</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【悲報】国語科先生，解けなきゃ ぶっ飛ばしてしまう。</h6>
+      <p class="small-text center-align">11月22日 午前0:39・ネタ</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【悲報】笠井氏，iPadﾌｨﾙﾑが地面接触で性能低下・使用不可</h6>
+      <p class="small-text center-align">11月18日 午前0:11</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【悲報】プロ睡眠者 最多で17人とみられる。</h6>
+      <p class="small-text center-align">「授業料の無駄では」の声も</p>
+      <p class="small-text center-align">11月16日 午前11:44</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">16日(水)，出席番号18番 調理実習。持ち物4点セット必須。</h6>
+      <p class="small-text center-align">11月15日 午後0:09</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">J3A担任，本日朝 2者面談をまもなく開始と名言。</h6>
+      <p class="small-text center-align">11月14日 午後9:42</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">維新の党と 日本民主党は 連立政権により 過半超与党に。</h6>
+      <p class="small-text center-align">11月11日 午前10:14</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">【緊急速報】維新の党が政権獲得。野党 1票差の 命の母党。</h6>
+      <p class="small-text center-align">11月11日 午前10:14</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">国語科担当「教員内でiPad使い方協議中」と発言。制限強化も?</h6>
+      <p class="small-text center-align">11月10日 午前11:57</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">J3A担任等が スマホ使用者を検挙。5人前後で 他クラスも含む?</h6>
+      <p class="small-text center-align">11月9日 午後1:31</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">日本のプロ睡眠者，最多で15人前後が一度以上睡眠。</h6>
+      <p class="small-text center-align">11月9日 午前11:46</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">家庭科，調理実習で忘れ物多数。授業に支障か。</h6>
+      <p class="small-text center-align">11月9日 午前8:51</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+    <article class="small-width border round">
+      <h6 class="bold">光山氏，内部進学試験に苦言。「I won't be back.」</h6>
+      <p class="small-text center-align">11月7日 午後3:56</p>
+      <!-- <nav>
+        <button class="round">Button</button>
+      </nav> -->
+    </article>
+  </div>
+
+  <h5 class="bold">期間限定</h5>
+  <div class="grid menu-font">
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='https://aoy190420.github.io/jp/education?utm_source=バージョン7の試験版の期間限定から'">
+        <i class="extra">verified</i>
+        <span class="small-text">安定版<br>(v6を使う)</span>
+      </button>
+    </div>
+  </div>
+  <h5 class="bold">for Education</h5>
+  <div class="grid menu-font">
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./keijiban'">
+        <i class="extra">forum</i>
+        <span class="small-text">掲示板(従来)</span>
+      </button>
+    </div>
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./asa-test'">
+        <i class="extra">calendar_month</i>
+        <span class="small-text s">朝ﾃｽﾄｽｹｼﾞｭｰﾙ</span>
+        <span class="small-text m l">朝テストスケジュール</span>
+      </button>
+    </div>
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./timetable'">
+        <i class="extra">schedule</i>
+        <span class="small-text">時間割表</span>
+      </button>
+    </div>
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./nit-meet'">
+        <i class="extra">videocam</i>
+        <span class="small-text">ミーティング</span>
+      </button>
+    </div>
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='googlechrome://youtube.076.ne.jp/'">
+        <i class="extra">youtube_activity</i>
+        <span class="small-text">Invidious</span>
+      </button>
+    </div>
+    <!-- <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./old-widget'">
+        <i class="extra">newspaper</i>
+        <span class="small-text">過去のWidget</span>
+      </button>
+    </div> -->
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='https://sites.google.com/view/aoy190420/g-account'">
+        <i class="extra">supervised_user_circle</i>
+        <span class="small-text">共有アカウント</span>
+      </button>
+    </div>
+  </div>
+  <h5 class="bold">サービスについて</h5>
+  <div class="grid menu-font">
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./share'">
+        <i class="extra">share</i>
+        <span class="small-text">共有</span>
+      </button>
+    </div>
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./feedback'">
+        <i class="extra">feedback</i>
+        <span class="small-text">報告と提案</span>
+      </button>
+    </div>
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./info'">
+        <i class="extra">info</i>
+        <span class="small-text">情報</span>
+      </button>
+    </div>
+  </div>
+  <h5 class="bold">約款など</h5>
+  <div class="grid menu-font">
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./terms'">
+        <i class="extra">description</i>
+        <span class="small-text">利用規約</span>
+      </button>
+    </div>
+    <div class="s6 m4 l3">
+      <button class="round border extra responsive vertical" onclick="location.href='./privacy'">
+        <i class="extra">lock</i>
+        <span class="small-text">プライバシー</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <p class="center-align">(C) 2016-2022 Aoy190420</p>
+  <br><br>
+</body>
+</main>
+</html>
